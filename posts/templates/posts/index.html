@@ -1,0 +1,11 @@
+{% if latest_video_list %}
+    <ul>
+    {% for video in latest_video_list %}
+        <li>
+            <a href="{{video.link}}">{{ video.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}
