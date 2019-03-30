@@ -14,12 +14,6 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
-
-    def publish():
-        self.published_at = timezone.now()
-        self.created_at = timezone.now()
-        self.updated_at = timezone.now()
-        self.save()
     
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=5)
