@@ -20,3 +20,9 @@ class Video(models.Model):
         return self.published_at >= timezone.now() - datetime.timedelta(days=5)
     
     was_published_recently.boolean = True
+
+
+class Subscriber(models.Model):
+    email = models.EmailField(max_length=254)
+    supscribed_at = models.DateTimeField('date supscribed', auto_now_add=True)
+    is_active = models.BooleanField('is active subscriber', default=True)
