@@ -25,7 +25,7 @@ SECRET_KEY = '82l55uo9cwb==x_o&h6hau#3r5s5idjaqzmgo1r)#9mxzw3lht'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wizard-website-dev.appspot.com']
 
 
 # Application definition
