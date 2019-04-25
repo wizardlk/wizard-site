@@ -6,39 +6,42 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="Wizard" /> <!-- website name -->
-	<meta property="og:site" content="https://wizardlk.com/" /> <!-- website link -->
-	<meta property="og:title" content="Wizard"/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="{% static 'posts/images/wizard_banner.jpg' %}" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Wizard" /> <!-- website name -->
+    <meta property="og:site" content="https://wizardlk.com/" /> <!-- website link -->
+    <meta property="og:title" content="Wizard" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="{% static 'posts/images/wizard_banner.jpg' %}" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
 
     <!-- Website Title -->
     <title>Wizard - Into a magical future</title>
-    
+
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="{% static 'posts/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'posts/css/fontawesome-all.css' %}" rel="stylesheet">
     <link href="{% static 'posts/css/swiper.css' %}" rel="stylesheet">
-	<link href="{% static 'posts/css/magnific-popup.css' %}" rel="stylesheet">
-	<link href="{% static 'posts/css/styles.css' %}" rel="stylesheet">
-	
-	<!-- Favicon  -->
+    <link href="{% static 'posts/css/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'posts/css/styles.css' %}" rel="stylesheet">
+
+    <!-- Favicon  -->
     <link rel="icon" href="{% static 'posts/images/favicon-32x32.png' %}">
 </head>
+
 <body data-spy="scroll" data-target=".fixed-top">
-    
+
     <!-- Preloader -->
-	<div class="spinner-wrapper">
+    <div class="spinner-wrapper">
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
@@ -46,7 +49,7 @@
         </div>
     </div>
     <!-- end of preloader -->
-    
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
@@ -56,10 +59,12 @@
             <!-- <li><a class="navbar-brand logo-text mobile-only page-scroll" href="index.html">Tuby</a></li> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image mobile-only page-scroll" href="index.html"><img src="{% static 'posts/images/logo.svg'%}" alt="alternative"></a>
+            <a class="navbar-brand logo-image mobile-only page-scroll" href="index.html"><img
+                    src="{% static 'posts/images/logo.svg'%}" alt="alternative"></a>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
                 <span class="navbar-toggler-awesome fas fa-times"></span>
             </button>
@@ -78,10 +83,12 @@
                     <a class="navbar-brand logo-text larger-devices page-scroll" href="#">Wizard</a>
 
                     <!-- Image Logo -->
-                    {% comment %} <li><a class="navbar-brand logo-image larger-devices page-scroll" href="#"><img src="{% static 'posts/images/apple-icon-76x76.png'%}" alt="alternative"></a></li> {% endcomment %}
+                    {% comment %} <li><a class="navbar-brand logo-image larger-devices page-scroll" href="#"><img
+                                src="{% static 'posts/images/apple-icon-76x76.png'%}" alt="alternative"></a></li>
+                    {% endcomment %}
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#about">ABOUT</a>
-                    </li>                  
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#extras">CONTACT</a>
@@ -103,7 +110,9 @@
                         <div class="text-container">
                             <h1 style="margin-bottom: 0;">Wizard</h1>
                             <h1>AI Tutorials For <span id="js-rotating">Designers, Developers, Marketers</span></h1>
-                            <p class="p-large">Find out more about the show and check out our great <a class="underline page-scroll" href="#offer">Special Offers</a> for regular and master classes</p>
+                            <p class="p-large">Find out more about the show and check out our great <a
+                                    class="underline page-scroll" href="#offer">Special Offers</a> for regular and
+                                master classes</p>
                             <a class="btn-solid-lg page-scroll" href="#videos">DISCOVER</a>
                             <a class="btn-outline-lg page-scroll" href="#your-link">YOUTUBE</a>
                         </div> <!-- end of text-container -->
@@ -116,7 +125,7 @@
                 </div>
             </a>
         </div> <!-- end of header-content -->
-        
+
         <!-- Video Background -->
         <video autoplay loop muted id="video-background" poster="{% static 'posts/images/header-background.jpg'%}">
             <source src="{% static 'posts/video/computer-screen.mp4'%}" type="video/mp4" />
@@ -126,14 +135,14 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    
+
     <!-- Featured Videos -->
     <div class="slider-1-wrapper">
         <div id="videos" class="slider-1">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        
+
                         <!-- Video Slider -->
                         <div class="slider-container">
                             <div class="swiper-container video-slider">
@@ -144,25 +153,30 @@
                                         <div class="row">
                                             <div class="col-xl-7">
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe src="https://www.youtube.com/embed/JPCFP6WzjaI" allowfullscreen></iframe>
+                                                    <iframe src="https://www.youtube.com/embed/JPCFP6WzjaI"
+                                                        allowfullscreen></iframe>
                                                 </div>
                                             </div> <!-- end of col -->
                                             <div class="col-xl-5">
                                                 <div class="text-container">
                                                     <h3>Find Out Which Is Better Flexbox Or CSS Grid?</h3>
-                                                    <p>Choose the best layout system for your online project. This video will help you take an informed decision.</p>
+                                                    <p>Choose the best layout system for your online project. This video
+                                                        will help you take an informed decision.</p>
                                                     <ul class="list-unstyled v-space-lg">
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Flexbox and CSS Grid pluses and minuses</div>
+                                                            <div class="media-body">Flexbox and CSS Grid pluses and
+                                                                minuses</div>
                                                         </li>
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Short and informative web technology review</div>
+                                                            <div class="media-body">Short and informative web technology
+                                                                review</div>
                                                         </li>
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Get the latest industry news and updates</div>
+                                                            <div class="media-body">Get the latest industry news and
+                                                                updates</div>
                                                         </li>
                                                     </ul>
                                                 </div> <!-- end of text-container -->
@@ -176,25 +190,30 @@
                                         <div class="row">
                                             <div class="col-xl-7">
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe src="https://www.youtube.com/embed/YIvjKId9m2c" allowfullscreen></iframe>
+                                                    <iframe src="https://www.youtube.com/embed/YIvjKId9m2c"
+                                                        allowfullscreen></iframe>
                                                 </div>
                                             </div> <!-- end of col -->
                                             <div class="col-xl-5">
                                                 <div class="text-container">
                                                     <h3>Quickly Set Up Your Preferred Text Editor VS</h3>
-                                                    <p>Check out this video for tips and tricks on how to setup your most loved text editor Visual Studio Code</p>
+                                                    <p>Check out this video for tips and tricks on how to setup your
+                                                        most loved text editor Visual Studio Code</p>
                                                     <ul class="list-unstyled v-space-lg">
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Short and informative web technology review</div>
+                                                            <div class="media-body">Short and informative web technology
+                                                                review</div>
                                                         </li>
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Flexbox and CSS Grid pluses and minuses</div>
+                                                            <div class="media-body">Flexbox and CSS Grid pluses and
+                                                                minuses</div>
                                                         </li>
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Get the latest industry news and updates</div>
+                                                            <div class="media-body">Get the latest industry news and
+                                                                updates</div>
                                                         </li>
                                                     </ul>
                                                 </div> <!-- end of text-container -->
@@ -208,25 +227,30 @@
                                         <div class="row">
                                             <div class="col-xl-7">
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe src="https://www.youtube.com/embed/80UUPMUAP-g" allowfullscreen></iframe>
+                                                    <iframe src="https://www.youtube.com/embed/80UUPMUAP-g"
+                                                        allowfullscreen></iframe>
                                                 </div>
                                             </div> <!-- end of col -->
                                             <div class="col-xl-5">
                                                 <div class="text-container">
                                                     <h3>How To Use Code Folding In Sublime Editor</h3>
-                                                    <p>Code folding is an important feature of every modern text editor. In this video we'll explore the Sublime</p>
+                                                    <p>Code folding is an important feature of every modern text editor.
+                                                        In this video we'll explore the Sublime</p>
                                                     <ul class="list-unstyled v-space-lg">
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Get the latest industry news and updates</div>
+                                                            <div class="media-body">Get the latest industry news and
+                                                                updates</div>
                                                         </li>
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Short and informative web technology review</div>
+                                                            <div class="media-body">Short and informative web technology
+                                                                review</div>
                                                         </li>
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Flexbox and CSS Grid pluses and minuses</div>
+                                                            <div class="media-body">Flexbox and CSS Grid pluses and
+                                                                minuses</div>
                                                         </li>
                                                     </ul>
                                                 </div> <!-- end of text-container -->
@@ -252,7 +276,7 @@
         </div> <!-- end of slider-1 -->
     </div> <!-- end of slider-1-wrapper -->
     <!-- end of featured videos -->
-    
+
 
     <!-- Latest Videos -->
     <!-- Note: video lightbox works with youtube and vimeo links -->
@@ -265,20 +289,24 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    
+
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-1.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-1.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">Table And Form HTML Tags</h5>
                             <p>Choose the best layout system for your online project. This video will help you take</p>
                         </div>
                     </div>
                     <!-- end of card -->
-                    
+
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-2.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-2.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">How To Edit Your Videos</h5>
                             <p>Check out this video for tips and tricks on how to setup your most loved text editor</p>
@@ -288,7 +316,9 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-3.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-3.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">Working As Freelancer</h5>
                             <p>Code folding is an important feature of every modern text editor. In this video we'll</p>
@@ -298,17 +328,21 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-4.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-4.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">Excel Advanced Functions</h5>
                             <p>Choose the best layout system for your online project. This video will help you take</p>
                         </div>
                     </div>
                     <!-- end of card -->
-                    
+
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-5.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-5.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">How To Work In A Small Team</h5>
                             <p>Check out this video for tips and tricks on how to setup your most loved text editor</p>
@@ -318,7 +352,9 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-6.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-6.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">JavaScript Secrets Unveiled</h5>
                             <p>Code folding is an important feature of every modern text editor. In this video we'll</p>
@@ -328,17 +364,21 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-7.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-7.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">Database Algorithm Exposed</h5>
                             <p>Choose the best layout system for your online project. This video will help you take</p>
                         </div>
                     </div>
                     <!-- end of card -->
-                    
+
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-8.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-8.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">Finding An Awesome Mentor</h5>
                             <p>Check out this video for tips and tricks on how to setup your most loved text editor</p>
@@ -348,7 +388,9 @@
 
                     <!-- Card -->
                     <div class="card">
-                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI" data-effect="fadeIn"><img class="img-fluid" src="{% static 'posts/images/latest-videos-9.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
+                            data-effect="fadeIn"><img class="img-fluid"
+                                src="{% static 'posts/images/latest-videos-9.jpg'%}" alt="alternative"></a>
                         <div class="card-body">
                             <h5 class="card-title">Advanced Java Programming</h5>
                             <p>Code folding is an important feature of every modern text editor. In this video we'll</p>
@@ -356,9 +398,9 @@
                     </div>
                     <!-- end of card -->
 
-                </div> <!-- end of col --> 
+                </div> <!-- end of col -->
             </div> <!-- end of row -->
-        </div> <!-- end of container --> 
+        </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
     <!-- end of latest videos -->
 
@@ -370,37 +412,44 @@
                 <div class="col-lg-12">
                     <div class="text-container">
                         <h2>Show Details</h2>
-                        <p class="p-large">This show is all about teaching web design and development. You'll find awesome time saving tips and tricks for HTML, CSS, PHP, MySQL and JavaScript.</p>
+                        <p class="p-large">This show is all about teaching web design and development. You'll find
+                            awesome time saving tips and tricks for HTML, CSS, PHP, MySQL and JavaScript.</p>
                         <h3>Subscriber Messages</h3>
 
                         <!-- Text Slider -->
                         <div class="slider-container">
                             <div class="swiper-container text-slider">
                                 <div class="swiper-wrapper">
-                                    
+
                                     <!-- Slide -->
                                     <div class="swiper-slide">
-                                        <p class="testimonial-text p-large">I made a smart choice to follow your channel because all of my latest projectss have been successful due to your advices. Love it!</p>
+                                        <p class="testimonial-text p-large">I made a smart choice to follow your channel
+                                            because all of my latest projectss have been successful due to your advices.
+                                            Love it!</p>
                                         <h5>Rick Yellowville</h5>
                                     </div> <!-- end of swiper-slide -->
                                     <!-- end of slide -->
 
                                     <!-- Slide -->
                                     <div class="swiper-slide">
-                                        <p class="testimonial-text p-large">I learn so much from your channel and I am really grateful for it. I am passionate about web design and I watch almost every video.</p>
+                                        <p class="testimonial-text p-large">I learn so much from your channel and I am
+                                            really grateful for it. I am passionate about web design and I watch almost
+                                            every video.</p>
                                         <h5>Lynda Marquez</h5>
                                     </div> <!-- end of swiper-slide -->
                                     <!-- end of slide -->
 
                                     <!-- Slide -->
                                     <div class="swiper-slide">
-                                        <p class="testimonial-text p-large">Never thought I could learn so much about web design from a YouTube show. Now I make smart web sites with the help of your information.</p>
+                                        <p class="testimonial-text p-large">Never thought I could learn so much about
+                                            web design from a YouTube show. Now I make smart web sites with the help of
+                                            your information.</p>
                                         <h5>Jay Frisco</h5>
                                     </div> <!-- end of swiper-slide -->
                                     <!-- end of slide -->
 
                                 </div> <!-- end of swiper-wrapper -->
-                                
+
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>
                                 <!-- end of add pagination -->
@@ -423,17 +472,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Show Values</h2>
-                    <p class="p-heading p-large">Tuby Web Dev Tutorials youtube show is focused on providing great tutorials on web design, development and online marketing</p>
+                    <p class="p-heading p-large">Tuby Web Dev Tutorials youtube show is focused on providing great
+                        tutorials on web design, development and online marketing</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-            
+
             <!-- Value -->
             <div class="row value-1">
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h3>Find Great Mentors</h3>
-                        <p>Learning with Tuby Web Dev Tutorials is a great way to finding quality mentors which will guide you on your path.</p>
-                        <p>The show's goal is to give you ideas about what options you have when considering to start and kind of web project.</p>
+                        <p>Learning with Tuby Web Dev Tutorials is a great way to finding quality mentors which will
+                            guide you on your path.</p>
+                        <p>The show's goal is to give you ideas about what options you have when considering to start
+                            and kind of web project.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -456,8 +508,10 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h3>Share Your Experience</h3>
-                        <p>Tuby youtube show focuses more on capturing experience from industry leaders and sharing it with beginners and novices.</p>
-                        <p>You will find great colleagues to share your knowledge with and even learn something new from them. Something new every day.</p>
+                        <p>Tuby youtube show focuses more on capturing experience from industry leaders and sharing it
+                            with beginners and novices.</p>
+                        <p>You will find great colleagues to share your knowledge with and even learn something new from
+                            them. Something new every day.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -468,8 +522,10 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h3>Make Learning Better</h3>
-                        <p>The show's goal is to give you ideas about what options you have when considering to start and kind of web project.</p>
-                        <p>Learning with Tuby Web Dev Tutorials is a great way to finding quality mentors which will guide you on your path.</p>
+                        <p>The show's goal is to give you ideas about what options you have when considering to start
+                            and kind of web project.</p>
+                        <p>Learning with Tuby Web Dev Tutorials is a great way to finding quality mentors which will
+                            guide you on your path.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -493,7 +549,8 @@
                 <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-6">
                     <div class="text-container">
                         <h2>About The Host</h2>
-                        <p class="p-large">Tuby is hosted by a young and experienced web developer which is very passionate about new technologies and loves teaching.</p>
+                        <p class="p-large">Tuby is hosted by a young and experienced web developer which is very
+                            passionate about new technologies and loves teaching.</p>
                         <h3>Work Experience</h3>
                         <ul class="list-unstyled v-space-lg">
                             <li class="media">
@@ -511,7 +568,8 @@
                         </ul>
                     </div> <!-- end of text-container -->
                     <div class="text-container">
-                        <p class="testimonial-text">“I love modern web technologies and I can't believe I have the chance of sharing all these new ideas with you"</p>
+                        <p class="testimonial-text">“I love modern web technologies and I can't believe I have the
+                            chance of sharing all these new ideas with you"</p>
                         <h5>John Albert - Show Host</h5>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -528,7 +586,7 @@
     <div class="slider-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">                    
+                <div class="col-lg-12">
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -544,17 +602,21 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2>Newsletter</h2>
-                        <p class="p-heading p-large">From time to time we organize contests for our web development courses. Stay connected by registering to our monthly newsletter</p>
-                        
+                        <p class="p-heading p-large">From time to time we organize contests for our web development
+                            courses. Stay connected by registering to our monthly newsletter</p>
+
                         <!-- Newsletter Form -->
                         <form id="newsletterForm" data-toggle="validator" data-focus="false">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <input type="email" class="form-control-input" id="cemail" required>
                                 <label class="label-control" for="cemail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group checkbox">
-                                <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree to Tuby's <a class="underline" href="privacy-policy.html">Privacy Policy</a> and <a class="underline" href="terms-conditions.html">Terms Conditions</a> 
+                                <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and
+                                agree to Tuby's <a class="underline" href="privacy-policy.html">Privacy Policy</a> and
+                                <a class="underline" href="terms-conditions.html">Terms Conditions</a>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
@@ -575,7 +637,7 @@
 
 
     <!-- Behind The Scenes -->
-    <div id="extras" class="slider-4">        
+    <div id="extras" class="slider-4">
     </div> <!-- end of slider-4 -->
     <!-- end of behind the scenes -->
 
@@ -638,19 +700,23 @@
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of copyright -->  
+    </div> <!-- end of copyright -->
     <!-- end of copyright -->
-    
-    	
+
+
     <!-- Scripts -->
-    <script src="{% static 'posts/js/jquery.min.js'%}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="{% static 'posts/js/popper.min.js'%}"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="{% static 'posts/js/bootstrap.min.js'%}"></script> <!-- Bootstrap framework -->
-    <script src="{% static 'posts/js/jquery.easing.min.js'%}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'posts/js/jquery.easing.min.js'%}"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="{% static 'posts/js/swiper.min.js'%}"></script> <!-- Swiper for image and text sliders -->
     <script src="{% static 'posts/js/jquery.magnific-popup.js'%}"></script> <!-- Magnific Popup for lightboxes -->
     <script src="{% static 'posts/js/morphext.min.js'%}"></script> <!-- Morphtext rotating text in the header-->
-    <script src="{% static 'posts/js/validator.min.js'%}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{% static 'posts/js/validator.min.js'%}"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="{% static 'posts/js/scripts.js'%}"></script> <!-- Custom scripts -->
 
 </body>

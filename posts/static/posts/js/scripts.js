@@ -174,6 +174,21 @@
 		}
     });
     
+    // csrf token setup for ajax requests
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
 
     /* Move Form Fields Label When User Types */
     // for input and textarea fields
@@ -205,7 +220,7 @@
         var terms = $("#cterms").val();
         $.ajax({
             type: "POST",
-            url: "php/newsletterform-process.php",
+            url: "",
             data: "email=" + email + "&terms=" + terms, 
             success: function(text) {
                 if (text == "success") {
@@ -313,6 +328,5 @@
 	/* Removes Long Focus On Buttons */
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
-	});
-
+	});    
 })(jQuery);
