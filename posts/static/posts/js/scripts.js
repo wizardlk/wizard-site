@@ -251,64 +251,7 @@
         }
         $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-
-
-    /* Privacy Form */
-    $("#PrivacyForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            pformError();
-            psubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            psubmitForm();
-        }
-    });
-
-    function psubmitForm() {
-        // initiate variables with form content
-		var name = $("#pname").val();
-		var email = $("#pemail").val();
-        var select = $("#pselect").val();
-        var terms = $("#pterms").val();
-        
-        $.ajax({
-            type: "POST",
-            url: "php/privacy-process.php",
-            data: "name=" + name + "&email=" + email + "&select=" + select + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    pformSuccess();
-                } else {
-                    pformError();
-                    psubmitMSG(false, text);
-                }
-            }
-        });
-	}
-
-    function pformSuccess() {
-        $("#PrivacyForm")[0].reset();
-        psubmitMSG(true, "Request Submitted!")
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-    }
-
-    function pformError() {
-        $("#PrivacyForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
-
-    function psubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
-    
+ 
 
     /* Back To Top Button */
     // create the back to top button

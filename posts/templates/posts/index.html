@@ -32,7 +32,8 @@
     <link href="{% static 'posts/css/fontawesome-all.css' %}" rel="stylesheet">
     <link href="{% static 'posts/css/swiper.css' %}" rel="stylesheet">
     <link href="{% static 'posts/css/magnific-popup.css' %}" rel="stylesheet">
-    <link href="{% static 'posts/css/styles.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'posts/css/styles.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'posts/css/custom-styles.css' %}" rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon" href="{% static 'posts/images/favicon-32x32.png' %}">
@@ -56,11 +57,13 @@
         <div class="container">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <li><a class="navbar-brand logo-text mobile-only page-scroll" href="index.html">Tuby</a></li> -->
+            <li><a class="navbar-brand logo-text mobile-only page-scroll" href="index.html">Wizard</a></li>
 
             <!-- Image Logo -->
+            {% comment %}
             <a class="navbar-brand logo-image mobile-only page-scroll" href="index.html"><img
-                    src="{% static 'posts/images/logo.svg'%}" alt="alternative"></a>
+                    src="{% static 'posts/images/apple-icon-76x76.png'%}" alt="alternative"></a>
+            {% endcomment %}       
 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
