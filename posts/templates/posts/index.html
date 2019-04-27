@@ -114,7 +114,7 @@
                                     class="underline page-scroll" href="#offer">Special Offers</a> for regular and
                                 master classes</p>
                             <a class="btn-solid-lg page-scroll" href="#videos">DISCOVER</a>
-                            <a class="btn-outline-lg page-scroll" href="#your-link">YOUTUBE</a>
+                            <a class="btn-outline-lg page-scroll" href="https://www.youtube.com/channel/UC4MDglKGvqZwvKkvzzZ6eOQ">YOUTUBE</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -147,22 +147,22 @@
                         <div class="slider-container">
                             <div class="swiper-container video-slider">
                                 <div class="swiper-wrapper">
-
+                                    
+                                    {% for video in latest_video_list|slice:":3" %}
                                     <!-- Slide -->
                                     <div class="swiper-slide">
                                         <div class="row">
                                             <div class="col-xl-7">
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe src="https://www.youtube.com/embed/JPCFP6WzjaI"
+                                                    <iframe src="https://www.youtube.com/embed/{{ video.video_id }}"
                                                         allowfullscreen></iframe>
                                                 </div>
                                             </div> <!-- end of col -->
                                             <div class="col-xl-5">
                                                 <div class="text-container">
-                                                    <h3>Find Out Which Is Better Flexbox Or CSS Grid?</h3>
-                                                    <p>Choose the best layout system for your online project. This video
-                                                        will help you take an informed decision.</p>
-                                                    <ul class="list-unstyled v-space-lg">
+                                                    <h3>{{ video.title }}</h3>
+                                                    <p>{{ video.short_description | safe | linebreaks }}</p>
+                                                    <!-- <ul class="list-unstyled v-space-lg">
                                                         <li class="media">
                                                             <i class="fas fa-chevron-right"></i>
                                                             <div class="media-body">Flexbox and CSS Grid pluses and
@@ -178,86 +178,13 @@
                                                             <div class="media-body">Get the latest industry news and
                                                                 updates</div>
                                                         </li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </div> <!-- end of text-container -->
                                             </div> <!-- end of col -->
                                         </div> <!-- end of row -->
                                     </div> <!-- end of swiper-slide -->
                                     <!-- end of slide -->
-
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="row">
-                                            <div class="col-xl-7">
-                                                <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe src="https://www.youtube.com/embed/YIvjKId9m2c"
-                                                        allowfullscreen></iframe>
-                                                </div>
-                                            </div> <!-- end of col -->
-                                            <div class="col-xl-5">
-                                                <div class="text-container">
-                                                    <h3>Quickly Set Up Your Preferred Text Editor VS</h3>
-                                                    <p>Check out this video for tips and tricks on how to setup your
-                                                        most loved text editor Visual Studio Code</p>
-                                                    <ul class="list-unstyled v-space-lg">
-                                                        <li class="media">
-                                                            <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Short and informative web technology
-                                                                review</div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Flexbox and CSS Grid pluses and
-                                                                minuses</div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Get the latest industry news and
-                                                                updates</div>
-                                                        </li>
-                                                    </ul>
-                                                </div> <!-- end of text-container -->
-                                            </div> <!-- end of col -->
-                                        </div> <!-- end of row -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
-
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="row">
-                                            <div class="col-xl-7">
-                                                <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe src="https://www.youtube.com/embed/80UUPMUAP-g"
-                                                        allowfullscreen></iframe>
-                                                </div>
-                                            </div> <!-- end of col -->
-                                            <div class="col-xl-5">
-                                                <div class="text-container">
-                                                    <h3>How To Use Code Folding In Sublime Editor</h3>
-                                                    <p>Code folding is an important feature of every modern text editor.
-                                                        In this video we'll explore the Sublime</p>
-                                                    <ul class="list-unstyled v-space-lg">
-                                                        <li class="media">
-                                                            <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Get the latest industry news and
-                                                                updates</div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Short and informative web technology
-                                                                review</div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <i class="fas fa-chevron-right"></i>
-                                                            <div class="media-body">Flexbox and CSS Grid pluses and
-                                                                minuses</div>
-                                                        </li>
-                                                    </ul>
-                                                </div> <!-- end of text-container -->
-                                            </div> <!-- end of col -->
-                                        </div> <!-- end of row -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                                    {% endfor %}                                    
 
                                 </div> <!-- end of swiper-wrapper -->
 
@@ -290,113 +217,19 @@
             <div class="row">
                 <div class="col-lg-12">
 
+                    {% for video in latest_video_list %}
                     <!-- Card -->
                     <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-1.jpg'%}" alt="alternative"></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v={{ video.video_id }}"
+                            data-effect="fadeIn">
+                            <img class="img-fluid" src="{{ MEDIA_URL }}{{ video.dummy_image }}" alt="alternative"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Table And Form HTML Tags</h5>
-                            <p>Choose the best layout system for your online project. This video will help you take</p>
+                            <h5 class="card-title">{{ video.title }}</h5>
+                            <p>{{ video.short_description | safe | linebreaks }}</p>
                         </div>
                     </div>
                     <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-2.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">How To Edit Your Videos</h5>
-                            <p>Check out this video for tips and tricks on how to setup your most loved text editor</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-3.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Working As Freelancer</h5>
-                            <p>Code folding is an important feature of every modern text editor. In this video we'll</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-4.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Excel Advanced Functions</h5>
-                            <p>Choose the best layout system for your online project. This video will help you take</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-5.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">How To Work In A Small Team</h5>
-                            <p>Check out this video for tips and tricks on how to setup your most loved text editor</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-6.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript Secrets Unveiled</h5>
-                            <p>Code folding is an important feature of every modern text editor. In this video we'll</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-7.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Database Algorithm Exposed</h5>
-                            <p>Choose the best layout system for your online project. This video will help you take</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-8.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Finding An Awesome Mentor</h5>
-                            <p>Check out this video for tips and tricks on how to setup your most loved text editor</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=JPCFP6WzjaI"
-                            data-effect="fadeIn"><img class="img-fluid"
-                                src="{% static 'posts/images/latest-videos-9.jpg'%}" alt="alternative"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Advanced Java Programming</h5>
-                            <p>Code folding is an important feature of every modern text editor. In this video we'll</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
+                    {% endfor %}                     
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -649,7 +482,7 @@
                 <div class="col-lg-12">
                     <h4>For More Follow Us On</h4>
                     <span class="fa-stack fa-lg">
-                        <a href="#your-link">
+                        <a href="https://www.facebook.com/live.wizardlk/">
                             <i class="fas fa-circle fa-stack-2x facebook"></i>
                             <i class="fab fa-facebook-f fa-stack-1x"></i>
                         </a>
@@ -672,7 +505,7 @@
                             <i class="fab fa-instagram fa-stack-1x"></i>
                         </a>
                     </span>
-                    <span class="fa-stack fa-lg">
+                    <!-- <span class="fa-stack fa-lg">
                         <a href="#your-link">
                             <i class="fas fa-circle fa-stack-2x linkedin"></i>
                             <i class="fab fa-linkedin-in fa-stack-1x"></i>
@@ -683,7 +516,7 @@
                             <i class="fas fa-circle fa-stack-2x dribbble"></i>
                             <i class="fab fa-dribbble fa-stack-1x"></i>
                         </a>
-                    </span>
+                    </span> -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -717,8 +550,11 @@
     <script src="{% static 'posts/js/morphext.min.js'%}"></script> <!-- Morphtext rotating text in the header-->
     <script src="{% static 'posts/js/validator.min.js'%}"></script>
     <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script>
+        var csrftoken = '{{ csrf_token }}';
+        var add_subscriber_url = '{% url "posts:add-subscriber" %}';
+    </script>
     <script src="{% static 'posts/js/scripts.js'%}"></script> <!-- Custom scripts -->
-
 </body>
 
 </html>

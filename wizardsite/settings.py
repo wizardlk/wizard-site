@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'wizard-website-dev.appspot.com'
-    ]
+    'gayan93.pythonanywhere.com'
+]
 
 
 # Application definition
@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -122,3 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/gayan93/wizard-site/static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -173,9 +173,7 @@
 			enabled:true //enable gallery mode
 		}
     });
-    
-    // csrf token setup for ajax requests
-    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+
 
     function csrfSafeMethod(method) {
         // these HTTP methods do not require CSRF protection
@@ -220,14 +218,14 @@
         var terms = $("#cterms").val();
         $.ajax({
             type: "POST",
-            url: "",
+            url: add_subscriber_url,
             data: "email=" + email + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
+            success: function(response) {
+                if (!response.error) {
                     cformSuccess();
                 } else {
                     cformError();
-                    csubmitMSG(false, text);
+                    csubmitMSG(false, response.msg);
                 }
             }
         });

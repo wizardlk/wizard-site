@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf import settings
+from django.conf.urls.static import static
+from posts import views
 
 urlpatterns = [
-    path('', include('posts.urls')),
+    path('', views.IndexView.as_view(), name='index'),
+    path('posts/', include('posts.urls')),
     path('admin/', admin.site.urls),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
