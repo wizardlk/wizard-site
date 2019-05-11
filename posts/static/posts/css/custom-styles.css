@@ -800,6 +800,10 @@ input[type='checkbox'] {
 	background-color: #f5f5f5;
 }
 
+.header .header-logo{
+	max-width: 10rem;
+}
+
 .header h1 {
 	margin-bottom: 1rem;
 	letter-spacing: -1px;
@@ -1490,6 +1494,28 @@ a:hover.back-to-top {
 /*****************************/
 /*     18. Media Queries     */
 /*****************************/	
+/* Min-width width 320px */
+@media (min-width: 320px) {
+	.header-logo{
+		width: 6rem;
+	}
+}
+
+/* Min-width width 375px */
+@media (min-width: 375px) {
+	.header-logo{
+		width: 8rem;
+	}
+}
+
+/* Min-width width 425px */
+@media (min-width: 425px) {
+	.header-logo{
+		width: 10rem;
+	}
+}
+
+
 /* Min-width width 768px */
 @media (min-width: 768px) {
 	
