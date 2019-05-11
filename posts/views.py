@@ -14,7 +14,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_video_list'
 
     def get_queryset(self):
-        return Video.objects.order_by('-published_at')[:9]
+        return Video.objects.order_by('-published_at')[:6]
 
 
 def addSubscriber(request):
