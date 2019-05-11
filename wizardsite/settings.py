@@ -127,3 +127,11 @@ STATIC_ROOT = '/home/gayan93/wizard-site/static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Email settings
+# Mailgun
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@sandbox0251ed115cc0445780020723f9aa896a.mailgun.org'
+EMAIL_HOST_PASSWORD = 'd65d8e75d6af42c032851d587ba22257-bdd08c82-41f8326e'
+EMAIL_USE_SSL = False

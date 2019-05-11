@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129038500-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129038500-2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Website Title -->
+    <title>Posts | Wizard</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="{% static 'posts/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'posts/css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'posts/css/custom-styles.css' %}" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'posts/images/favicon-32x32.png' %}">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+    <!-- Latest Videos -->
+    <!-- Note: video lightbox works with youtube and vimeo links -->
+    <div class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Latest Videos</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    {% for video in latest_video_list %}
+                    <!-- Card -->
+                    <div class="card">
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v={{ video.video_id }}"
+                            data-effect="fadeIn">
+                            <img class="img-fluid" src="{{ MEDIA_URL }}{{ video.dummy_image }}" alt="alternative"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ video.title }}</h5>
+                            <p>{{ video.short_description | safe | linebreaks }}</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    {% endfor %}
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of latest videos -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>For More Follow Us On</h4>
+                    <span class="fa-stack fa-lg">
+                        <a href="https://www.facebook.com/live.wizardlk/" target="_blank">
+                            <i class="fas fa-circle fa-stack-2x facebook"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack fa-lg">
+                        <a href="https://twitter.com/Wizard_LK" target="_blank">
+                            <i class="fas fa-circle fa-stack-2x twitter"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <!-- <span class="fa-stack fa-lg">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x google-plus"></i>
+                                <i class="fab fa-google-plus-g fa-stack-1x"></i>
+                            </a>
+                        </span> -->
+                    <span class="fa-stack fa-lg">
+                        <a href="https://www.instagram.com/wizard_lk/" target="_blank">
+                            <i class="fas fa-circle fa-stack-2x instagram"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <!-- <span class="fa-stack fa-lg" target="_blank">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x linkedin"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack fa-lg" target="_blank">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x dribbble"></i>
+                                <i class="fab fa-dribbble fa-stack-1x"></i>
+                            </a>
+                        </span> -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © Xchord Software</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'posts/js/popper.min.js'%}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{% static 'posts/js/bootstrap.min.js'%}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'posts/js/jquery.easing.min.js'%}"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'posts/js/swiper.min.js'%}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{% static 'posts/js/jquery.magnific-popup.js'%}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'posts/js/morphext.min.js'%}"></script> <!-- Morphtext rotating text in the header-->
+    <script src="{% static 'posts/js/validator.min.js'%}"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script>
+        var csrftoken = '{{ csrf_token }}';
+        var add_subscriber_url = '{% url "posts:add-subscriber" %}';
+    </script>
+    <script src="{% static 'posts/js/posts/scripts.js'%}"></script> <!-- Custom scripts -->
+</body>
+
+</html>

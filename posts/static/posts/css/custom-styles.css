@@ -242,7 +242,7 @@ a:hover {
 	border: 1px solid #f5f5f5;
 	border-radius: 0.125rem;
 	background-color: #f5f5f5;
-	color: #ebe4e4;
+	/* color: #ebe4e4; */
 	font: 400 0.875rem/1.9375rem "Open Sans", sans-serif;
 	transition: all 0.2s;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
