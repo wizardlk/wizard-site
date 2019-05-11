@@ -68,17 +68,17 @@ body, p {
 
 h1 {
 	color: #b71c1c;
-	font: 400 3.375rem/3.625rem "Oleo Script", sans-serif;
+	font: 400 3.375rem/3.625rem "Roboto", sans-serif;
 }
 
 h2 {
 	color: #b71c1c;
-	font: 400 3.25rem/3.75rem "Oleo Script", sans-serif;
+	font: 400 3.25rem/3.75rem "Roboto", sans-serif;
 }
 
 h3 {
 	margin-bottom: 0.625rem;
-	font: 400 2.125rem/2.625rem "Oleo Script", sans-serif;
+	font: 400 2.125rem/2.625rem "Roboto", sans-serif;
 }
 
 h4 {
@@ -652,7 +652,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-text {
-	font: 600 2.125rem/2rem "Oleo Script", sans-serif;
+	font: 600 2.125rem/2rem "Roboto", sans-serif;
 	letter-spacing: -1px;
 	color: #b71c1c;
 }
@@ -1058,7 +1058,7 @@ input[type='checkbox'] {
 	border-radius: 0.125rem;
 	background-color: #b71c1c;
 	color: #fff;
-	font: 700 1.375rem/3rem "Oleo Script", sans-serif;
+	font: 700 1.375rem/3rem "Roboto", sans-serif;
 	text-align: center;
 }
 
@@ -1501,7 +1501,7 @@ a:hover.back-to-top {
 	}
 
 	h1 {
-		font: 400 4.25rem/4.75rem "Oleo Script", sans-serif;
+		font: 400 4.25rem/4.75rem "Roboto", sans-serif;
 	}
 
 	.testimonial-text {
@@ -1570,7 +1570,7 @@ a:hover.back-to-top {
 	}
 
 	.header h1 {
-		font: 400 3.75rem/4.25rem "Oleo Script", sans-serif;
+		font: 400 3.75rem/4.25rem "Roboto", sans-serif;
 	}
 
 	.header .scroll-icon {
