@@ -20,7 +20,7 @@ class IndexView(generic.ListView):
 class PostsListView(generic.ListView):
     template_name = 'posts/posts-list.html'
     context_object_name = 'latest_video_list'
-
+    # TODO:have to add pagination
     def get_queryset(self):
         return Video.objects.order_by('-published_at')
 
